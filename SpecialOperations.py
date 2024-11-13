@@ -158,6 +158,9 @@ print((5 + 3) - 6**2 / 3)
 print((5 + 3) - (6**2 / 3))
 print(6**3)
 
+#Parentheses can be used to override the default precedence and force operations to occur in a specific order.
+#By mastering the usage and precedence of these operators, you gain the ability to manipulate data effectively and efficiently in Python.
+
 # **Investment planning**
 
 #Who doesn't want to be rich? So, let's invest some money.
