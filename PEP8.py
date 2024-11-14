@@ -52,12 +52,13 @@ else:
 #At this stage, you might be wondering, "Hey, how can I print a long paragraph in Python if it has more than 79 characters?" 
 # That's a totally fair question! Let's tackle this together.
 #Check out this not-so-great Python code that ignores the PEP 8 rule about line length:
+print()
 print("Today was a sunny day, perfect for a picnic. We enjoyed sandwiches and fresh lemonade under the shade of an old oak tree.")
 #It's not pretty, but it works! However, according to PEP 8, this code is not recommended.
 #Here's a simple tweak to make it neat and compliant with PEP 8:
 
-print("Today was a sunny day, perfect for a picnic.We enjoyed sandwiches" 
-      " and fresh lemonade under the shade of an old oak tree.")
+print("\nToday was a sunny day, perfect for a picnic.We enjoyed sandwiches" 
+      " and fresh lemonade under the shade of an old oak tree.\n")
 
 #Although we've split the line to adhere to the rule, Python cleverly prints it as a single seamless line, just like before. 
 # This way, your code remains clean and easy to read, all while sticking to the guidelines.
@@ -78,6 +79,7 @@ my_name = "John Doe"
 # It keeps things looking clean and organized.
 
 #Here is an example that doesn't follow the rule:
+print(   )
 print( 'I have an extra space after opening parenthesis!') #extra spaces after an opening parenthesis.
 print('I have an extra space before closing parenthesis!' ) #extra spaces before a closing parenthesis.
 print( 'I have two extra spaces inside parentheses!' ) #extra spaces within parentheses.
@@ -105,7 +107,31 @@ DATABASE_URL = 'https://example.com/data'
 #PEP 8 has a suggestion for operators also. Use a single space around binary operators 
 # (e.g., +, -, *, /, =, ==) to improve readability.
 #Proper spacing around operators makes your code easier to read and understand. It helps distinguish between different parts of the expression, reducing the likelihood of errors.
+print()
 PI = 3.14159
 RADIUS = 3
-AREA = PI * RADIUS**2
-print("The area of a circle with radius", RADIUS, "is", AREA)
+area = PI * RADIUS**2
+print("The area of a circle with radius", RADIUS, "is", area)
+print()
+
+# **Consistency is the key**
+
+#You already know that in Python, you can wrap your strings in either single (') or double (") quotes. Both ways work perfectly fine. 
+# But here’s a pro tip from Python's style guide, PEP 8: pick one style and stick with it across your whole project. 
+# Why? Because consistency is key to clean, readable code.
+#However, there is an exception:
+
+# If your string has quotes inside it, opt for the opposite type for the string itself. 
+# This neat trick lets you skip using backslashes (\), those pesky that can make your code look messy.
+
+#This is good:
+print("It's a good string")
+
+#This? Not so much:
+print('It\'s a bad string')
+
+#See the difference? In the second example, the backslash before the single quote (\') is necessary to stop the single quote from ending the string too soon. 
+# It works, but it's kind of an eyesore, right? PEP 8 tells us that dodging backslashes by smartly choosing our quotation marks can make our code much easier on the eyes.
+
+
+
