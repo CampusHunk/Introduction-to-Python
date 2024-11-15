@@ -44,5 +44,60 @@ print("Enter your name:")
 name = input()
 print("Hello", name)
 
+#There's no big difference actually: in the previous example, the input will be printed in the same line as the message, 
+# while in this case it will be entered on the next line. So, how many lines will be printed when executing the program above?
+#3 lines.
 
+age = input("Enter your age: ")
+print("You are", age, "years old")
 
+# **Learn from mistakes**
+
+#Now let's try a different task: fixing errors.
+
+#Bugs and errors are inevitable in programming. A good programmer is not one who never makes mistakes, 
+# but one who knows how to resolve them when they happen.
+
+# **Submitting an input**
+
+#First of all, how long can the user's input be, and how does the program understand that the person entered everything they wanted?
+
+# Here's a thing about the input()function: as soon as the program has started executing this function, 
+# it stops and waits for the user to enter some value and press Enter.
+#That also means that if there's no input from the user, the program will not execute any further.
+#Based on what we just said, will the warning be displayed before the user inputs a value?
+
+dummy_variable = input("Enter some dummy value: ")
+print("Warning: Oh, cmon, you are taking too long") #prints after the user inputs a value
+
+# **Taking several inputs**
+
+#What if you need to read several inputs? In that case, you should call the function more than once:
+
+day = input("Enter the day: ")
+month = input("Enter the month: ")
+year = input("Enter the year: ")
+
+#How about three inputs? Can you fill in the blanks below to input the city name, country, and ZIP code?
+city = input("Insert the city you currently live in: ")
+country = input("Insert the country you currently live in: ")
+print("You live in " + city + ", " + country)
+zip_code = input("Insert your ZIP code: ")
+
+# **Type of input**
+
+#Any value you enter, the function sees as a string.
+#It doesn’t matter if you enter digits or letters; the input will be converted to a string. 
+# So, how do we convert them to other types? You must be patient and wait until the next topic.
+#For now, since you know all about data types, what would be the type of the year variable in the piece of code below?
+year = type(input("Enter an integer representing your birth year: "))
+
+# **Final boss**
+
+#Now, for your final challenge: write a program that asks for the user's name and profession and then prints an introductory sentence, just like in the example below.
+#While printing messages for users during asking for input is generally recommended, please omit them in this challenge, 
+# or your code might not pass the tests. Use only input() function without any message inside.
+
+user_name = input("Enter your name: ")
+user_profession = input("Enter your profession: ")
+print("Hello", user_name, "you are a", user_profession)
