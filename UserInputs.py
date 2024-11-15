@@ -90,7 +90,7 @@ zip_code = input("Insert your ZIP code: ")
 #It doesn’t matter if you enter digits or letters; the input will be converted to a string. 
 # So, how do we convert them to other types? You must be patient and wait until the next topic.
 #For now, since you know all about data types, what would be the type of the year variable in the piece of code below?
-year = type(input("Enter an integer representing your birth year: "))
+year = input("Enter an integer representing your birth year: ")
 
 # **Final boss**
 
