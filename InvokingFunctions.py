@@ -92,3 +92,8 @@ def sum_numbers(a, b):
     return sum((a, b))
     print("Result:", sum_numbers(num1, num2))
 
+print()
+x = int(input("Enter first number: "))
+y = int(input("Enter second number: "))
+print("Result:", sum_numbers(x, y))
+
