@@ -106,8 +106,73 @@ tricky = not (False or '') #True
 # x or y returns x if x is truthy; otherwise, it evaluates and returns y.
 
 #For instance:
-lazy_or = True (1/0) # division is never evaluated, because the first argument is True
+#lazy_or = True (1/0) # division is never evaluated, because the first argument is True
 
-lazy_and = False (1/0) # division is never evaluated, because the first argument is False
+#lazy_and = False (1/0) # division is never evaluated, because the first argument is False
 
+# Boolean values
+# Assuming that variables have the following boolean values:
+a = True
+b = not a
+print(not (a and b)) # True
+
+# When Sunny Meets Rainy: A Logic Twist
+is_raining = True
+is_sunny = False
+print(not is_raining and is_sunny) # False
+
+# Truthy and falsy values
+# When do you get truthy or falsy values? When using logical operators with non-boolean values;
+
+5 and 0 and 12 # 0
+True or False # True
+not (False or True) # False
+5 or '' # 5
+
+# Evaluating a loan application
+# Use your knowledge of boolean operations to determine whether a bank should give a loan to its client. Using this program, 
+# you can evaluate the conditions for any applicant and make an informed decision about whether to proceed with the loan or not.
+# The program takes into account three criteria: credit score, income criterion, and the existence of another loan.
+
+# Example of an applicant's characteristics
+credit_score = 750
+annual_income = 60000
+has_collateral = True
+has_existing_loan = False
+
+# This criterion should be True if the applicant's annual income is at least 50,000 or they have collateral.
+annual_income = (annual_income >= 50000) or has_collateral
+print(annual_income) # True
+
+## Decision: check if all of the criteria are satisfied
+is_appoved = ((credit_score >= 700) and (annual_income >= 50000) and not has_existing_loan) # True
+
+# **Computing and displaying boolean operation result**
+
+#Given two variables x and y set to 'True' and 'False' respectively. The code computes a third variable, z, 
+# as a Boolean operation between x and y. It then concatenates the result of the Boolean 
+# operation to the string 'The result of 'True and False' is ' and stores this in a variable called 'result'. 
+# Your task is to make sure the print statement outputs the correct computation of the Boolean operation.
+
+x = True
+y = False
+z = x and y
+result = 'The result of ' + str(x) + ' and ' + str(y) + ' is ' + str(z)
+print(result)
+
+# **Decision making with rain and umbrella status**
+
+#Suppose it's raining outside and you wonder if you should stay home or not. Your decision is based on whether you have an umbrella or not. 
+# You decide to write a Python program that makes this decision for you. Remember, you should only stay home if it's raining and you do not have an umbrella.
+
+is_raining = True
+has_umbrella = False
+should_stay_home = is_raining and not has_umbrella
+message = 'Should I stay home? ' + str(should_stay_home)
+print(message)
+
+# **Check if a number is divisible by 2**
+
+#Using logical operators write a Python program that takes an integer as input. If the integer is divisible by 2, print True; otherwise, print False. 
+# For input, you will scan a single integer. The output should be either True or False based on the condition.
 
