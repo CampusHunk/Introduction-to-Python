@@ -164,3 +164,43 @@ print()
 
 my_string = input("Enter a name: ")
 print(len(my_string))
+print()
+
+#Calculating power using base and exponent
+# Write a program that takes a base and an exponent as input and prints the result of raising the base to the power of the exponent. 
+# The program should read the base and exponent from the user as integers, calculate the result using the pow() function, and print the final value.
+
+base = int(input("Enter base: "))
+exponent = int(input("Enter exponent: "))
+result = pow(base, exponent)
+print(result)
+print()
+
+#Showing min and max
+# You are building a program to show minimum and maximum numbers.
+
+def show_min(num_1, num_2):
+    return min(num_1, num_2), max(num_1, num_2)
+
+def show_max(num_1, num_2):
+    return max(num_1, num_2)
+
+print("Min:", show_min(5,10), "Max:", show_max(5, 10))
+print()
+
+#Hello, world!
+# The classical introductory exercise, slightly modified. Write a program that takes a string, writes it to the variable name
+# and then prints "Hello, world! Hello, name". Note that there's a space before the name.
+# Tip: Invoke the print() function with two arguments – the output string and the name variable. 
+# Don't forget that print() separates each pair of arguments with whitespace.
+
+name = input()
+print("Hwllo, world! Hello, " + name)
+
+#Longest word
+
+# Find the longest word in a pair and print its length.
+
+word_one = input()
+word_two = input()
+print(max(len(word_one), len(word_two)))
