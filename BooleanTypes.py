@@ -121,6 +121,7 @@ is_raining = True
 is_sunny = False
 print(not is_raining and is_sunny) # False
 
+
 # Truthy and falsy values
 # When do you get truthy or falsy values? When using logical operators with non-boolean values;
 
@@ -159,6 +160,7 @@ y = False
 z = x and y
 result = 'The result of ' + str(x) + ' and ' + str(y) + ' is ' + str(z)
 print(result)
+print()
 
 # **Decision making with rain and umbrella status**
 
@@ -170,9 +172,16 @@ has_umbrella = False
 should_stay_home = is_raining and not has_umbrella
 message = 'Should I stay home? ' + str(should_stay_home)
 print(message)
+print()
 
 # **Check if a number is divisible by 2**
 
 #Using logical operators write a Python program that takes an integer as input. If the integer is divisible by 2, print True; otherwise, print False. 
 # For input, you will scan a single integer. The output should be either True or False based on the condition.
 
+number = int(input("Enter a number divisible by 2: "))
+
+def divisible_by_2(number):
+    return number % 2 == 0
+
+print(divisible_by_2(number))
