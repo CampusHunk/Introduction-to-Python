@@ -56,4 +56,58 @@ result = x < y and y <= z
 # example, x < y <= z is almost equivalent to the expression you saw in the last example. 
 # The difference is that y is evaluated only once.
 
-result = 10 < (100 * 100) <= 10000
+result = 10 < (100 * 100) <= 10000  # True, the multiplication is evaluated once
+
+#Please pay attention to the fact that tools for code quality often recommend chaining comparisons instead of joining them.
+
+#Comparison chaining, however, should be used carefully because sometimes expressions 
+# might get tricky, so the result would depend on the operators' order and how the parentheses are put. 
+# Consider this example:
+
+a = 1
+b = 2
+c = 3
+d = 4
+e = 5
+f = 6
+
+print(b + c <= d or e + f >= d == e == 5)
+print((b + c <= d or e + f >= d == e) == (e == 5))
+
+# The first expression is False because it is evaluated the following way: or operator has the 
+# lowest priority, so it will be evaluated last. The first argument (b + c <= e) is False. 
+# The second argument is the long one: f + g >= e == f == 5, it is going to be evaluated 
+# consequently, so let's break it down: this expression is equivalent to (f + g >= e) and (e == f) and (f == 5), 
+# which evaluates to False. Finally calculate the value of the whole expression: False or False is False. 
+# In the second case, we have False in the left parenthesis and False in the right parenthesis, 
+# so False equals False.
+
+# **Logic & arithmetics**
+
+# Let's look at another interesting case. At the beginning of the topic, we learned that the 
+# result of applying comparison operators is always bool. However, if there is a logical and 
+# arithmetic part in an expression, we might see unusual behavior due to logical operators in 
+# Python being short-circuited, or lazy:
+
+a1 = 1
+b1 = 2
+c1 = 3
+e1 = 4
+f1 = 5
+g1 = 6
+
+# True and-expressions return the result of the last operation:
+print(b1 + c1 * f1 >= e1 and (f1 + g1) * c1) ## (17 >= 4 is True) and 33 -> 33
+print((f1 + g1) * c1 and b1 + c1 * f1 >= e1) ## 33 and (17 >= 4 is True) -> 33
+
+# False and-expressions return a boolean False value:
+print(b1 + c1 * f1 <= e1 and (f1 + g1) * c)  # (17 <= 4 is False) and 33 --> False
+print((f1 + g1) * c1 and b1 + c1 * f1 <= e1)  # 33 and (17 <= 4 is False) --> False
+
+# True or-expressions return the result of the first operation:
+print(b1 + c1 * f1 >= e1 or (f1 + g1) * c)  # (17 >= 4 is True) or 33 --> True
+print((f1 + g1) * c1 or b1 + c1 * f1 >= e1)  # 33 or (17 >= 4 is True) --> 33
+
+# True-False or-expressions return the True part:
+print((f1 + g1) * c1 or b1 + c1 * f1 <= e1)  # 33 or (17 <= 4 is False) --> 33
+print(b1 + c1 * f1 <= e1 or (f1 + g1) * c1)  # (17 <= 4 is False) or 33 --> 33
