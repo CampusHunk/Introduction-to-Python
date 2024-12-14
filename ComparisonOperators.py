@@ -111,3 +111,73 @@ print((f1 + g1) * c1 or b1 + c1 * f1 >= e1)  # 33 or (17 >= 4 is True) --> 33
 # True-False or-expressions return the True part:
 print((f1 + g1) * c1 or b1 + c1 * f1 <= e1)  # 33 or (17 <= 4 is False) --> 33
 print(b1 + c1 * f1 <= e1 or (f1 + g1) * c1)  # (17 <= 4 is False) or 33 --> 33
+
+# True test
+# Select all the values of variable a such that test_result is True.
+# -100
+# 0
+# 100
+# 200
+# 500
+
+a = ...
+a = -100  # Can also use 0 or 500 to get True result
+
+test_result = a <= 0 or a > 200
+print("Test result:",test_result)
+
+#Let's check each value from the given options:
+
+#-100: Since -100 ≤ 0, this will make test_result True
+#0: Since 0 ≤ 0, this will make test_result True
+#100: Since 100 > 0 AND 100 ≤ 200, this will make test_result False
+#200: Since 200 > 0 AND 200 ≤ 200, this will make test_result False
+#500: Since 500 > 200, this will make test_result True
+
+# **Comparing two integers and reporting the result**
+
+# Consider you have two integers, num1 set to 100 and num2 set to 200. You need to compare these two numbers and store the 
+# result of the comparison (whether num1 is less than num2) in a variable named comparison_result. Then, use a pre-formatted 
+# string to report the comparison result in the form: 'The comparison result of num1 being less than num2 is: comparison_result.
+
+num1 = 100
+num2 = 200
+comparison_result = num1 < num2
+print("The comparison result of num1 being less than num2 is:", comparison_result)
+
+# **Carry on!**
+
+# If you've ever traveled by plane, you know that there are strict rules when it comes to carry-on luggage. A handbag has three 
+# dimensions: width, length and height. Some company set the following rule for the carry-on:
+
+height = 10
+width = 35
+length = 25
+
+allowed = (height <= 10 and width < 35 and length <= 40) or (height + width + length <= 80)
+print(allowed)
+
+# **Matchmaker**
+
+# Here are the values of some variables:
+x = 1
+y = 1
+z = 1000
+q = 1000
+m = 37
+
+contestant_1 = z < y
+contestant_2 = x == y
+contestant_3 = m > q
+
+print("Matchmaker:",contestant_1)
+print("Matchmaker:",contestant_2)
+print("Matchmaker:", contestant_3)
+
+# **In the middle**
+
+# Write a program that reads an integer value from input and checks if it is less than 10 or greater than 250.
+a = int(input().strip())
+checker = a < 10 or a > 250
+print(checker)
+
