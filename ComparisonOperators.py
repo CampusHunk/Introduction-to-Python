@@ -181,3 +181,72 @@ a = int(input().strip())
 checker = a < 10 or a > 250
 print(checker)
 
+# **Hot or not? Weather station's dilemma**
+
+# A weather station needs to report if the temperature is above or below a certain threshold. Can you fill the blanks in the code 
+# to convert Celsius to Fahrenheit and check if it's above the threshold?
+
+celsius = 25
+threshold = 80
+fahrenheit = (celsius * 9/5) + 32
+above_threshold = fahrenheit > threshold
+result = "above" if above_threshold else "below"
+print(f"The temperature is {fahrenheit}°F, which is {result} the threshold.\n")
+
+# **Goldilocks' thermostat challenge**
+
+# Write a program to check if the current temperature is within a safe range? The program should print "Safe" if 
+# the temperature is between the minimum and maximum values, and "Alert!" otherwise.
+
+current_temp = 22
+safe_min = 18
+safe_max = 24
+if current_temp >= safe_min and current_temp <= safe_max:
+    print("Safe\n") 
+else:
+    print("Alert!")
+
+# **Discount**
+
+# The museum gives discounts to people according to the following rule:
+# This condition determines if a person is eligible for a museum discount based on their age
+# The condition (age < 21) or (age >= 65) will return True in two cases:
+# 1. If the person is under 21 years old (age < 21)
+# 2. If the person is 65 years or older (age >= 65)
+# This creates two age groups that get discounts:
+# - Youth discount: Ages 0-20 
+# - Senior discount: Ages 65 and up
+# Anyone between 21-64 years old (inclusive) will not get a discount
+age = 15
+discount = (age < 21) or (age >= 65)
+print(discount)
+
+# Based on the discount rule (age < 21) or (age >= 65):
+# Mary (49) - No discount (49 >= 21 and 49 < 65)
+# Andrew (50) - No discount (50 >= 21 and 50 < 65) 
+# Dora (21) - No discount (21 >= 21 and 21 < 65)
+# John (15) - Gets discount (15 < 21)
+# Ann (75) - Gets discount (75 >= 65)
+# So John and Ann will get discounts
+
+# **Guessing game**
+
+# You are playing a guessing game with a user. Imagine that you came up with an integer stored in a variable set_number.
+# Check if set_number is equal to the product of two integers entered by the user.
+
+# The input format:
+# Two lines containing integer numbers for you to multiply.
+
+set_number = 6557
+num_1 = int(input("Enter first number:"))   
+num_2 = int(input("Enter second number:"))
+print(set_number == num_1 * num_2)
+
+# *Comparing heights: Andy and Ben**
+
+# Write a Python program that reads two integer numbers from the input. The first integer is the height of Andy, and the second 
+# one is the height of his best friend Ben. Your program should print 'True' if Andy is taller than Ben or 'False' otherwise.
+
+andy_height = int(input("Enter Andy's height: "))
+ben_height = int(input("Enter Ben's height:"))
+print(andy_height > ben_height)
