@@ -250,3 +250,36 @@ print(set_number == num_1 * num_2)
 andy_height = int(input("Enter Andy's height: "))
 ben_height = int(input("Enter Ben's height:"))
 print(andy_height > ben_height)
+
+# **Focus on the positive**
+
+# Write a program that reads an integer value from the input and checks if it is positive.
+# Hints:
+# 0 is not a positive number.
+# A comparison already returns a boolean, so if you need the result of the comparison, you can print it, like this print(5 > 9)#False
+
+num = int(input("Enter a number:"))
+negative_num = 0
+print(num > negative_num)
+
+# **Movie theater**
+
+# The movie theater has cinema halls that can accommodate a certain number of viewers each day. Figure out if a movie theater 
+# can hold a given number of viewers that plan to visit it on a particular day.
+# The input format:
+# The first line contains the number of cinema halls.
+# The second line contains the number of cinema visitors.
+# The third line contains the number of cinema visitors on a particular day.
+
+num_halls = int(input("Enter the number of cinema halls:"))
+num_visitors = int(input("Enter the number of cinema visitors:"))
+num_visitors_per_day = int(input("Enter the number of cinema visitors on a particular day:"))
+print(num_halls * num_visitors_per_day >= num_visitors)
+
+# or 
+
+num_halls = int(input())
+capacity = int(input())
+planned_viewers = int(input())
+total_capacity = num_halls * capacity
+print(total_capacity >= planned_viewers)
