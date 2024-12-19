@@ -278,8 +278,50 @@ print(num_halls * num_visitors_per_day >= num_visitors)
 
 # or 
 
-num_halls = int(input())
-capacity = int(input())
-planned_viewers = int(input())
+num_halls = int(input("Enter the number of cinema halls:"))
+capacity = int(input("Enter the number of cinema visitors:"))
+planned_viewers = int(input("Enter the number of cinema visitors on a particular day:"))
 total_capacity = num_halls * capacity
 print(total_capacity >= planned_viewers)
+
+# **Very odd**
+
+# Find out if the result of dividing A by B is an odd number.
+
+# The input format:
+# The first line is the dividend (A) and the second line is the divisor (B). 
+# It is guaranteed that the numbers are divided without remainder.
+
+A = int(input("Enter a dividend:"))
+B = int(input("Enter a divisor:"))
+result = A // B
+print(result % 2 != 0)
+
+# or
+
+A = int(input("Enter a dividend:"))
+B = int(input("Enter a divisor:"))
+result = A / B
+is_odd = result % 2 != 0
+print(is_odd)
+
+# **Enrolling**
+
+# Imagine, you are developing a rule in terms of logical and comparison operations to determine whether you should enroll a 
+# student in your course or not. The rule itself looks like this:
+
+average_grade = int(input("Enter the average grade:"))
+recommended_by_tutor = bool(input("Enter if recommended by tutor:"))
+finished_introductory_course = bool(input("Enter if finished introductory course:"))
+introductory_course_grade = int(input("Enter introductory course grade:"))
+
+enroll_student = ((average_grade >= 40 and recommended_by_tutor) 
+or (finished_introductory_course and introductory_course_grade > 85))
+print(enroll_student)
+
+# Parameters meaning:
+
+# average_grade is an integer variable that shows the student's average grade.
+# recommended_by_tutor is a bool variable that shows whether the student has a recommendation from the tutor.
+# finished_introductory_course is a bool variable that shows whether the student finished the introductory course.
+# introductory_course_grade is an integer variable that shows the student's introductory course grade.
